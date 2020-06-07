@@ -84,7 +84,7 @@ function init(){
 			var last_x = Math.round(W/cs);
 			var last_y = Math.round(H/cs);
 
-			if(this.cells[0].y<0 || this.cells[0].x < 0 || this.cells[0].x > last_x || this.cells[0].y > last_y){
+			if(this.cells[0].y<0 || this.cells[0].x < 0 || this.cells[0].x >= last_x || this.cells[0].y >= last_y){
 				game_over = true;
 			}
 
