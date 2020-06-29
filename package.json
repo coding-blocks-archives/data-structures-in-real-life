@@ -1,0 +1,22 @@
+{
+  "name": "data-structures-in-real-life",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amzamani/data-structures-in-real-life.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amzamani/data-structures-in-real-life/issues"
+  },
+  "homepage": "https://github.com/amzamani/data-structures-in-real-life#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
