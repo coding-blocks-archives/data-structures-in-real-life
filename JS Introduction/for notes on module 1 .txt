@@ -1,0 +1,83 @@
+ 
+ ------NOTE: oops.js and practice.js files cover 7. js basics 04-classes and obkects.mp4 and
+  dom_basic.js file contains 11. event listeners.mp4 and box.js represents a bit 10.game loop
+  
+  ----------for more detailed notes:
+  
+---notes on 9. html5 canvas :
+
+CB DATA STRUCTURES REAL LIFE 1. programming in JavaScript - 9.html5 canvas
+
+Background image for canvas using css
+
+Get canvas element in js and set canvas.height etc
+
+To draw graphics on canvas one more object needed
+
+Call getContext on canvas save to a variable pen
+
+Pen.fillrect for drawing rectangle
+Pen. Fillstyle to colour inside Rect
+
+Pen.arc, fillstyle etc for circle and see Google for such canvas stuff
+Note: explaination was a bit unclear but refer Google and grepper
+
+
+
+-----------notes on 10. game loop:
+
+CB DS REAL LIFE
+1. Programming in js- 10. Game loop
+***imp note :
+Variables are declared globally without let,const,var in general very bad practice but here used 
+
+Game loop:
+1-Initialise objects
+2- Draw<->Update infinite loop these 2 make until gave over
+
+Create a rectangle object rect with 4 attributes (see Google)
+
+Call pen.fillrect(rect.x...)(see Google and grepper)
+
+Create 4 functions below(not sure whether it needs to be below or not) pen.fillerect namely:
+Init, draw,update and gameloop and inside gameloop call draw them update
+
+****Important note:
+Canvas related code to go in init function along with pen,rect object declaration
+And pen.fillstyle and pen.fillrect will go in draw
+
+---Init called 1 but gameloop infinitely
+
+Below all code call init and gameloop with setinterval method to call it indefinitely
+NOTE: search google for setinterval and unknown functions
+
+Now we use this gameloop getting called indefinitely to make changes on canvas
+Like drawing rectangle on canvas for each iteration with changing its coordinates
+
+Add speed property to rect in init function
+
+Draw function should have pen.fillrect followed by pen.fillstyle
+And update rect.x+=rect.speed
+
+**"So basically draw function will create a rectangle and update will change the position of rect for next iteration"
+
+But output of above code gives unwanted output hence we modify the code:
+
+To solve this we call pen.clearRect as first line of draw for whole canvas 
+
+**Also add code to make sure rectangle doesn't go out of canvas by adding if else in update function now:
+
+-if rect's top right corner points 's x coordinate exceeds width of canvas or top left points x is less than 0(left most canvas coordinate) then make rect.speed*=-1
+
+Box oscillate bw left and right boundaries at this point
+
+***For game over:
+Now inside init create global var gameover false initialised
+
+Now so var f=setinterval...(below init call)
+**Note: var f or f will have same scope but do f make it global to avoid confusion
+
+Now inside gameloop function add if gameover is true clearinterval(f)
+
+***Note: search google and grepper for functions
+
